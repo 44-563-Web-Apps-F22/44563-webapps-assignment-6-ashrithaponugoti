@@ -40,22 +40,23 @@ function checkGuess(){
 }
 </script>
 <div class="container">
-    <img src="odonata.jpg" height="100" weight="100" onclick="swapImage()">
+    <img id="picture" src="odonata.jpg" height="100" weight="100" onclick="swapImage()">
 </div>
 <script>
     var useImage=1
+    var img=document.getElementById("picture")
     function swapImage(){
         switch(useImage){
             case 1:
-                src="pupa.jpg"
+                img.src="pupa.jpg"
                 useImage++
                 break
             case 2:
-                src="odonata.jpg"
+                img.src="odonata.jpg"
                 useImage++
                 break
             case 3:
-                src="uliodon.jpg"
+                img.src="uliodon.jpg"
                 useImage++
                 break
         }
