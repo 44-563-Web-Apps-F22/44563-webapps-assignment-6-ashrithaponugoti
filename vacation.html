@@ -21,6 +21,17 @@
     <input type="button" onclick="selectVacation()" value="Select a vacation">
 </form>
 <p id="result3">Result is displayed</p>
+
+<form>
+    <lable for="property">Enter a city</lable>
+    <input type="text" id="property" name="property" value="city"><br>
+
+    <label for="price">Enter price</label>
+    <input type="text" id="price" name="price"><br>
+
+    <input type="button" onclick="updateVacation()" value="Update the vacation">
+</form>
+<p id="result4">Result</p>
 <script>
     var my_vacation={}
     out=document.getElementById("result3")
@@ -46,7 +57,15 @@
         }
         out.innerHTML=JSON.stringify(my_vacation)
     }
-    
+
+    function updateVacation(){
+        city_input=document.getElementById("property").value
+        price_input=document.getElementById("price").value
+        out=document.getElementById("result4")
+        my_vacation["city"]=city_input
+        my_vacation["price"]=price_input
+        out.innerHTML=JSON.stringify(my_vacation)
+    }
 </script>
 
 
