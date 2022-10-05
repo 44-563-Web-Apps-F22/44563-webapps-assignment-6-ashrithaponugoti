@@ -13,7 +13,7 @@
     <input type ="number" id="amount" name="amount" value="20"> <br>
 
     <label for="discount">Enter the discount percentage</label>
-    <input type ="number" id="discount" name="discount" value="10"> <br>
+    <input type ="number" id="disc" name="disc" value="10"> <br>
 
     <input type="button" onclick="discount()" value="Apply discount">
 </form>
@@ -25,15 +25,15 @@
 
 function discount(){
     base_value = document.getElementById("amount").value
-    discount_value = document.getElementById("discount").value
+    discount_value = document.getElementById("disc").value
     result=""
+    let disc_amount=0
+    disc_amount=base_value-base_value*discount_value/100
     out = document.getElementById("result")
-    for(i=1;i<6;i++){
-        base_value=base_value*i
-        discount_value=discount_value*base_value
-        result.push(discount_value)
+    for(let i=1;i<6;i++){
+        result=result+disc_amount*i+" "
     }
-    out.innerHTML="Discounted amounts for base "+base +"are:"+result
+    out.innerHTML="Discounted amounts for base "+base_value +"are:"+result
 }
 </script>
 
