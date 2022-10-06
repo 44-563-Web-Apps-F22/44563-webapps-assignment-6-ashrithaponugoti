@@ -32,10 +32,14 @@ function checkGuess(){
         correct++
         alert("You got it right")
         out.innerHTML="Number of correct attempts:"+correct
-    } else {
+    } 
+    else {
         wrong++
         alert("Wrong Musician")
         out.innerHTML="Number of wrongs attempts:"+wrong
+    }
+    if(wrong==3){
+        alert("Sorry,game over")
     }
 }
 </script>
